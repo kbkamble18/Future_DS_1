@@ -1,0 +1,65 @@
+Online Retail Data Analysis Dashboard
+This repository contains the Power BI dashboard and the associated dataset used for analyzing online retail sales from 2009 to 2011. The project's primary goal was to transform raw sales data into a dynamic and interactive dashboard that provides key business insights.
+
+1. The Dataset
+The analysis is based on a dataset of online retail transactions. The data is provided in three separate Excel files:
+
+online retail file.xlsx (contains sales data from 2009-2010 and 2010-2011 in two separate tabs)
+
+2009-2010 file.xlsx
+
+2010-2011 file.xlsx
+
+Each file contains the following key columns:
+
+Invoice: A unique identifier for each transaction.
+
+StockCode: An identifier for each product.
+
+Description: The product name.
+
+Quantity: The number of items sold in the transaction.
+
+  InvoiceDate: The date and time of the transaction.
+
+Price: The unit price of the product.
+
+Customer ID: A unique identifier for each customer.
+
+Country: The country where the customer resides.
+
+2. Methodology
+The following steps were taken to create the Power BI dashboard:
+
+Data Transformation (Power Query)
+Data Consolidation: All three Excel files were imported into Power BI. The data was then combined into a single master table using the Append Queries feature in the Power Query Editor.
+
+Data Cleaning: Empty or null values in the Customer ID column were removed to ensure all transactions could be tied back to a specific customer.
+
+Calculated Column: A new column named Sales was created by multiplying Quantity by Price to calculate the total revenue for each line item.
+
+Data Modeling (DAX Measures)
+Several key performance indicators (KPIs) were created using DAX (Data Analysis Expressions) to facilitate analysis:
+
+Total Sales: The sum of all sales.
+
+Total Quantity Sold: The total number of items sold.
+
+Number of Orders: A distinct count of all invoices.
+
+Total Customers: A distinct count of all unique customer IDs.
+
+Average Order Value (AOV): Calculated by dividing Total Sales by the Number of Orders.
+
+3. Dashboard Visualizations
+The final dashboard includes the following interactive visuals to present the data effectively:
+
+KPI Cards: Displaying key metrics such as Total Sales, Total Customers, and Average Order Value.
+
+Sales over Time Chart: A line chart showing the trend of total sales over the 2009-2011 period.
+
+Sales by Country Map: A map visual displaying total sales, with bubble size indicating the volume of sales in each country.
+
+Top Products and Customers Bar Charts: Showing the best-selling products and highest-spending customers.
+
+Interactive Slicers: Allowing users to filter the entire dashboard by Country and InvoiceDate.
