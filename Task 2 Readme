@@ -1,0 +1,52 @@
+Facebook Ad Campaign Dashboard
+
+Project Overview
+
+This Power BI dashboard provides a comprehensive analysis of a Facebook Ad Campaign dataset. Its primary purpose is to help marketers and analysts gain actionable insights into campaign performance, audience demographics, and return on investment. The dashboard is designed to be interactive, allowing users to drill down into specific campaigns and ad sets to understand performance metrics in detail.
+
+Key Features
+Performance at a Glance: Key Performance Indicators (KPIs) for total impressions, clicks, spend, and conversions are displayed prominently.
+
+Demographic Insights: Analyze ad performance across different age groups and genders to identify top-performing audiences.
+
+Audience Targeting Analysis: Evaluate which interest categories are driving the most impressions, clicks, and conversions.
+
+Time-Based Trends: Visualize campaign spend and performance over time to spot trends and optimize future strategies.
+
+Interactive Slicers: Filter data by campaign ID or specific date ranges for customized analysis.
+
+Dataset
+The dashboard is built using a dataset of Facebook Ad Campaign metrics. The raw data includes various columns such as:
+
+ad_id, reporting_start, reporting_end
+
+campaign_id, adset_id
+
+age, gender
+
+interest1, interest2, interest3
+
+impressions, clicks, spent, total_conversion, approved_conversion
+
+Data Cleaning and Transformation
+A critical step in preparing this dashboard was data cleaning and transformation using Power Query Editor to ensure accuracy and usability. The following specific issues were addressed:
+
+Age Column: The age column, which contained mixed data types (e.g., 30-35 and single numbers), was transformed by calculating the midpoint of each range. This allowed the column to be used for numerical analysis and visualizations.
+
+Gender Column: The gender column, which contained numeric codes, was mapped to a new, user-friendly text-based column (Male, Female, Other) using a conditional statement.
+
+Interest Columns: To handle the high number of unique values, a Top N filter was applied to the pie charts, grouping lesser-performing interests into an 'Other' category to improve readability.
+
+Tools and Technologies
+Power BI Desktop: Used for data connection, transformation, modeling, and visualization.
+
+Power Query Editor: Utilized for all data cleaning and transformation tasks.
+
+How to Use
+Clone the Repository: Clone this repository to your local machine.
+
+Open in Power BI: Open the .pbix file in Power BI Desktop.
+
+Explore Data: Interact with the slicers and visuals to explore the data.
+
+Refresh Data: To update the dashboard with new data, go to the Home tab and click the Refresh button.
